@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTransaction } from "../actions/index";
+import { addTransaction } from "../../actions";
+import style from "./AddTransaction.module.css";
+
 function AddTransaction() {
   const dispatch = useDispatch();
 

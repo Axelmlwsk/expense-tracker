@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import style from "./IncomeExpenses.module.css";
 
 export function currencyFormat(num) {
   return "$" + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
@@ -15,14 +16,14 @@ function IncomeExpenses() {
   let expensesTotal = expensesTransactions.reduce((acc, item) => (acc += parseFloat(item.amount)), 0);
 
   return (
-    <div className="inc-exp-container">
-      <div className="income">
-        <p>income</p>
-        <p>{currencyFormat(incomeTotal)}</p>
+    <div className={style.container}>
+      <div className={style.income}>
+        <p>INCOME</p>
+        <span>{currencyFormat(incomeTotal)}</span>
       </div>
-      <div className="expenses">
-        <p>expenses</p>
-        <p>{currencyFormat(expensesTotal)}</p>
+      <div className={style.expenses}>
+        <p>EXPENSES</p>
+        <span>{currencyFormat(expensesTotal)}</span>
       </div>
     </div>
   );

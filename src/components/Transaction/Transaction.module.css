@@ -1,0 +1,44 @@
+.transactionContainer {
+  display: flex;
+  width: 500px;
+  position: relative;
+  height: 38px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 2rem 0.5rem;
+  font-weight: 600;
+  box-shadow: 11px 6px 50px -25px rgba(0, 0, 0, 0.83);
+  -webkit-box-shadow: 11px 6px 50px -25px rgba(0, 0, 0, 0.83);
+  -moz-box-shadow: 11px 6px 50px -25px rgba(0, 0, 0, 0.83);
+}
+
+.button {
+  position: absolute;
+  right: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 25px;
+  color: grey;
+}
+
+.red {
+  height: 38px;
+  width: 10px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+}
+
+.green {
+  height: 38px;
+  width: 10px;
+  background-color: green;
+  position: absolute;
+  right: 0;
+}
+
+.amount {
+  margin-right: 1rem;
+}

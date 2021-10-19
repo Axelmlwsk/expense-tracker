@@ -1,0 +1,19 @@
+.balanceContainer {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.description {
+  font-weight: 300;
+  font-size: 1.2rem;
+}

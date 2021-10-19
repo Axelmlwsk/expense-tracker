@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+}
+
+.income,
+.expenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.income > p,
+.expenses > p {
+  font-weight: 700;
+}
+
+.income > span,
+.expenses > span {
+  color: var(--green);
+  font-size: 1.5rem;
+}
+
+.expenses > span {
+  color: var(--red);
+}

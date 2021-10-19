@@ -1,13 +1,13 @@
 import "./App.css";
 import "./normalize.css";
-import Header from "./components/Header";
-import Balance from "./components/Balance";
-import IncomeExpenses from "./components/IncomeExpenses";
-import TransactionList from "./components/TransactionList";
-import AddTransaction from "./components/AddTransaction";
+import Header from "./components/Header/Header.jsx";
+import Balance from "./components/Balance/Balance.jsx";
+import IncomeExpenses from "./components/IncomeExpenses/IncomeExpenses.jsx";
+import TransactionList from "./components/TransactionList/TransactionList.jsx";
+import AddTransaction from "./components/AddTransaction/AddTransaction.jsx";
 function App() {
   return (
-    <div className="app-container">
+    <div className="container-app">
       <Header />
       <Balance />
       <IncomeExpenses />
