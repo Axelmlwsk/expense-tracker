@@ -4,9 +4,6 @@ let ID = 0;
 
 const initialState = {
   transactions: [],
-  income: 400,
-  expenses: 300,
-  balance: 100,
 };
 
 function rootReducer(state = initialState, action) {

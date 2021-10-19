@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { deleteTransaction } from "../actions/index";
+import { currencyFormat } from "./IncomeExpenses";
 
 function Transaction({ text, amount, id }) {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ function Transaction({ text, amount, id }) {
     <div>
       <button onClick={handleClick}>x</button>
       <p>
-        {text}, {amount}, {id}
+        {text} {currencyFormat(parseFloat(amount))}
       </p>
     </div>
   );
