@@ -14,7 +14,7 @@ function rootReducer(state = initialState, action) {
     case ADD_TRANSACTION:
       return { ...state, transactions: [...state.transactions, { ...action.payload, id: ++ID }] };
     case DELETE_TRANSACTION:
-      return state.transactions.filter((trans) => trans.id !== action.payload);
+      return { ...state, transactions: state.transactions.filter((trans) => trans.id !== action.payload) };
     default:
       return state;
   }
