@@ -1,0 +1,20 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  background-color: white;
+  width: 600px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
