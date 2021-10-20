@@ -7,7 +7,7 @@
   -webkit-box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);
   padding: 1.5rem 0;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .income,
@@ -20,12 +20,14 @@
 .income > p,
 .expenses > p {
   font-weight: 700;
+  margin: 0;
 }
 
 .income > span,
 .expenses > span {
   color: var(--green);
   font-size: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 .expenses > span {

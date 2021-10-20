@@ -1,0 +1,33 @@
+.container {
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text,
+.amount {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.text input,
+.amount input {
+  margin-top: 0.5rem;
+  height: 40px;
+  border: 1px grey solid;
+  outline: none;
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+}
+
+button {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 2.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  background-color: var(--grey);
+}
