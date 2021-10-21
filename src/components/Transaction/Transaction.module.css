@@ -7,7 +7,6 @@
   align-items: center;
   margin-bottom: 1rem;
   font-weight: 600;
-  box-sizing: border-box;
   box-shadow: 10px 10px 31px -16px rgba(0, 0, 0, 0.55);
   -webkit-box-shadow: 10px 10px 31px -16px rgba(0, 0, 0, 0.55);
   -moz-box-shadow: 10px 10px 31px -16px rgba(0, 0, 0, 0.55);
@@ -46,4 +45,10 @@
   left: -2rem;
   color: var(--grey);
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .transactionContainer {
+    width: 300px;
+  }
 }
