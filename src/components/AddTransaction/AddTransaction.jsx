@@ -7,11 +7,7 @@ import style from "./AddTransaction.module.css";
 function AddTransaction() {
   const dispatch = useDispatch();
 
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
+  const { register, handleSubmit } = useForm();
 
   const [transaction, setTransaction] = useState({
     text: "",
