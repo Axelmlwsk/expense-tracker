@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 60%;
+  min-width: 60%;
   box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);
   -webkit-box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: -7px -6px 29px -9px rgba(0, 0, 0, 0.39);

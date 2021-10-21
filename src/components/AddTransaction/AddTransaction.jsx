@@ -1,40 +1,51 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useForm } from "react-hook-form";
 import { addTransaction } from "../../actions";
 import style from "./AddTransaction.module.css";
 
 function AddTransaction() {
   const dispatch = useDispatch();
 
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
+
   const [transaction, setTransaction] = useState({
     text: "",
-    amount: 0,
+    amount: "",
   });
 
   const handleChange = (event) => {
-    if (transaction.amount.length > 10) {
-      alert("asdasda");
-    }
     setTransaction({ ...transaction, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (event) => {
     dispatch(addTransaction(transaction));
   };
 
   return (
     <div className={style.container}>
       <h3>Add a transaction</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className={style.text}>
           <label>Text</label>
-          <input value={transaction.text} onChange={handleChange} type="text" name="text" placeholder="Enter text..." />
+          <input {...register("text", { required: "Enter a description", maxLength: 28 })} value={transaction.text} onChange={handleChange} type="text" name="text" placeholder="Enter text..." />
         </div>
 
         <div className={style.amount}>
           <label>Amount</label>
-          <input value={transaction.amount} onChange={handleChange} type="number" step="0.1" name="amount" placeholder="Enter Amount..." />
+          <input
+            {...register("amount", { required: "Enter an amount", maxLength: 12 })}
+            value={transaction.amount}
+            onChange={handleChange}
+            type="number"
+            step="0.1"
+            name="amount"
+            placeholder="Enter Amount..."
+          />
         </div>
         <button type="submit">Add transaction</button>
       </form>

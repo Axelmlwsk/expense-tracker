@@ -22,6 +22,11 @@
   padding-left: 0.8rem;
 }
 
+.error {
+  color: var(--red);
+  display: none;
+}
+
 button {
   width: 100%;
   border: none;
